@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pruebas_student,pruebas.student,model_pruebas_student,base.group_user,1,1,1,1
+access_pruebas_teacher,pruebas.teacher,model_pruebas_teacher,base.group_user,1,1,1,1
+access_pruebas_subject,pruebas.subject,model_pruebas_subject,base.group_user,1,1,1,1
+access_pruebas_classroom,pruebas.classroom,model_pruebas_classroom,base.group_user,1,1,1,1

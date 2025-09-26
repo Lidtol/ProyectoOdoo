@@ -1,0 +1,61 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="pruebas.list">
+      <field name="name">pruebas list</field>
+      <field name="model">pruebas.pruebas</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </list>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="pruebas.action_students_window">
+      <field name="name">pruebas Student window</field>
+      <field name="res_model">pruebas.student</field>
+      <field name="view_mode">list,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="pruebas.action_teacher_window">
+      <field name="name">pruebas Teacher window</field>
+      <field name="res_model">pruebas.teacher</field>
+      <field name="view_mode">list,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="pruebas.action_subject_window">
+      <field name="name">pruebas Subject window</field>
+      <field name="res_model">pruebas.subject</field>
+      <field name="view_mode">list,form</field>
+    </record>
+
+  
+
+    <!-- Top menu item -->
+
+    <menuitem name="School" id="pruebas.menu_root_school"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Management" id="pruebas.menu_management" parent="pruebas.menu_root_school"/>
+
+    <!-- actions -->
+
+    <menuitem name="Students" id="pruebas.menu_students" parent="pruebas.menu_management"
+              action="pruebas.action_students_window"/>
+
+    <menuitem name="Teachers" id="pruebas.menu_teacher" parent="pruebas.menu_management"
+              action="pruebas.action_teacher_window"/>
+
+    <menuitem name="Subjects" id="pruebas.menu_subject" parent="pruebas.menu_management"
+              action="pruebas.action_subject_window"/>
+
+  </data>
+</odoo>
+
